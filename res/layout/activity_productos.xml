@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.softiv.Productos" >
+
+    <EditText
+        android:id="@+id/txtid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Id" />
+
+    <EditText
+        android:id="@+id/txtnombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtid"
+        android:layout_alignRight="@+id/txtid"
+        android:layout_below="@+id/txtid"
+        android:ems="10"
+        android:hint="Nombre" />
+
+    <EditText
+        android:id="@+id/txtdescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtnombre"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtnombre"
+        android:ems="10"
+        android:hint="Descripcion" />
+
+    <EditText
+        android:id="@+id/txtvalor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtdescripcion"
+        android:layout_alignRight="@+id/txtdescripcion"
+        android:layout_below="@+id/txtdescripcion"
+        android:ems="10"
+        android:hint="Valor" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/txtcantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtvalor"
+        android:layout_alignRight="@+id/txtvalor"
+        android:layout_below="@+id/txtvalor"
+        android:ems="10"
+        android:hint="Cantidad" />
+
+    <Button
+        android:id="@+id/btnguardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listcategoria"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        android:text="Guardar" />
+
+    <Button
+        android:id="@+id/btnmostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnguardar"
+        android:layout_alignBottom="@+id/btnguardar"
+        android:layout_toRightOf="@+id/btnguardar"
+        android:text="Mostrar" />
+
+    <Button
+        android:id="@+id/btnactualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnmostrar"
+        android:layout_toRightOf="@+id/btnmostrar"
+        android:text="Actualizar" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnguardar"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="17dp"
+        android:text="Avatar"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageButton
+        android:id="@+id/avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnactualizar"
+        android:layout_centerVertical="true"
+        android:src="@drawable/buyup" />
+
+    <Spinner
+        android:id="@+id/listcategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtcantidad"
+        android:layout_below="@+id/avatar"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
